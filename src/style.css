@@ -1,0 +1,270 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&display=swap");
+
+:root {
+  font-family: "Nunito", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  --gap: 24px;
+  --light-color: rgba(255, 255, 255, 0.748);
+  --shadow: 5px 5px rgba(0, 0, 0, 0.27);
+  --main-color: rgb(6, 31, 70);
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  background: url(./images/bread-bg.jpg) no-repeat center center fixed;
+  background-size: cover;
+  /* overflow: hidden;
+  background-position: center;
+  background-repeat: no-repeat; */
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+
+header {
+  padding: 15px;
+  padding-left: 36px;
+  padding-right: 36px;
+  background-color: #fff8ebe1;
+  /* color: white; */
+  font-weight: bold;
+  font-size: 1.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  box-shadow: var(--shadow);
+  z-index: 8;
+}
+
+.header-left {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.header-right {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+
+  font-size: small;
+}
+
+.header-tab {
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #fff;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.header-tab:hover {
+  background-color: rgb(235, 206, 164);
+}
+
+.header-tab:active {
+  background-color: rgb(211, 148, 53);
+}
+
+.chosen-tab {
+  background-color: rgb(65, 47, 20);
+  color: white;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: rgba(0, 0, 0, 0.832); */
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+}
+
+.menu-bg-mask {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(24, 15, 5, 0.573);
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-cards {
+  /* height: 100%;
+  width: 100%; */
+  flex: 1;
+  margin: 48px;
+  display: flex;
+  justify-content: center;
+  gap: 36px;
+  flex-wrap: wrap;
+}
+
+.menu-card {
+  background-color: rgba(0, 0, 0, 0.589);
+  border-radius: 20px;
+  height: 200px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+}
+
+/* .menu-price {
+  background-color: #000000a1;
+  font-weight: bold;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+} */
+
+.menu-img-container {
+  background-color: #ffffffc6;
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  top: -50px;
+  left: 50px;
+}
+
+.menu-img {
+  height: 180px;
+  width: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.menu-text {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 145px;
+}
+
+.contact-box {
+  height: 70%;
+  width: 400px;
+  background-color: #0e0e0ea0;
+  color: white;
+  margin-left: 40px;
+  border-radius: 30px;
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: space-evenly;
+}
+
+.contact-div {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.contact-img {
+  height: 50px;
+}
+
+#content {
+  display: flex;
+  align-items: center;
+}
+
+.welcome-box {
+  height: 80%;
+  width: 50%;
+  background-color: #1a1a1aa0;
+  color: white;
+  margin-left: 40px;
+  border-radius: 30px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.welcome-1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  gap: 48px;
+  font-size: 60px;
+}
+
+.welcome-logo {
+  height: 200px;
+  width: auto;
+}
+
+.welcome-2 {
+  text-align: center;
+}
+
+#welcome-button {
+  padding: 16px;
+  padding-left: 26px;
+  padding-right: 26px;
+  background-color: rgb(161, 59, 59);
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+#welcome-button:hover {
+  background-color: rgb(207, 122, 122);
+}
+
+#welcome-button:active {
+  background-color: rgb(252, 218, 218);
+  color: rgb(83, 22, 22);
+}
+
+footer {
+  font-size: 10px;
+  text-align: center;
+  background-color: #1a1a1ac9;
+  color: white;
+  padding-left: var(--gap);
+  padding-right: var(--gap);
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+#content {
+  flex: 1;
+}
