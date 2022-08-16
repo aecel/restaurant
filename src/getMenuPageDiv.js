@@ -10,6 +10,25 @@ import dorayaki from "./images/dorayaki.png"
 import currybread from "./images/currybread.png"
 import addElement from "./addElement.js"
 
+const menuCardChild = (srcImg, menuText) => {
+  return addElement({
+    classList: "menu-card",
+    children: [
+      addElement({
+        classList: "menu-img-container",
+        children: addElement({
+          type: "img",
+          classList: "menu-img",
+          src: srcImg,
+        }),
+      }),
+      addElement({
+        classList: "menu-text",
+        text: menuText,
+      }),
+    ],
+  })
+}
 
 const getMenuPageDiv = () => {
   const bgMask = addElement({
@@ -22,176 +41,16 @@ const getMenuPageDiv = () => {
     classList: "menu-cards",
     parent: bgMask,
     children: [
-      addElement({
-        classList: "menu-card",
-        children: [
-          addElement({
-            classList: "menu-img-container",
-            children: addElement({
-              type: "img",
-              classList: "menu-img",
-              src: croissant,
-            }),
-          }),
-          addElement({
-            classList: "menu-text",
-            text: "Kurowa-san",
-          }),
-        ],
-      }),
-      addElement({
-        classList: "menu-card",
-        children: [
-          addElement({
-            classList: "menu-img-container",
-            children: addElement({
-              type: "img",
-              classList: "menu-img",
-              src: crosandwich,
-            }),
-          }),
-          addElement({
-            classList: "menu-text",
-            text: "Kurowa-sandwich",
-          }),
-        ],
-      }),
-      addElement({
-        classList: "menu-card",
-        children: [
-          addElement({
-            classList: "menu-img-container",
-            children: addElement({
-              type: "img",
-              classList: "menu-img",
-              src: strawberry,
-            }),
-          }),
-          addElement({
-            classList: "menu-text",
-            text: "Strawberry Kurowa-san",
-          }),
-        ],
-      }),
-      addElement({
-        classList: "menu-card",
-        children: [
-          addElement({
-            classList: "menu-img-container",
-            children: addElement({
-              type: "img",
-              classList: "menu-img",
-              src: chocolat,
-            }),
-          }),
-          addElement({
-            classList: "menu-text",
-            text: "Pain Au Chocolat",
-          }),
-        ],
-      }),
-      addElement({
-        classList: "menu-card",
-        children: [
-          addElement({
-            classList: "menu-img-container",
-            children: addElement({
-              type: "img",
-              classList: "menu-img",
-              src: tray,
-            }),
-          }),
-          addElement({
-            classList: "menu-text",
-            text: "Kurowa-san Party",
-          }),
-        ],
-      }),
-      addElement({
-        classList: "menu-card",
-        children: [
-          addElement({
-            classList: "menu-img-container",
-            children: addElement({
-              type: "img",
-              classList: "menu-img",
-              src: melonsan,
-            }),
-          }),
-          addElement({
-            classList: "menu-text",
-            text: "Melon-san",
-          }),
-        ],
-      }),
-      addElement({
-        classList: "menu-card",
-        children: [
-          addElement({
-            classList: "menu-img-container",
-            children: addElement({
-              type: "img",
-              classList: "menu-img",
-              src: dorayaki,
-            }),
-          }),
-          addElement({
-            classList: "menu-text",
-            text: "Dorayaki",
-          }),
-        ],
-      }),
-      addElement({
-        classList: "menu-card",
-        children: [
-          addElement({
-            classList: "menu-img-container",
-            children: addElement({
-              type: "img",
-              classList: "menu-img",
-              src: currybread,
-            }),
-          }),
-          addElement({
-            classList: "menu-text",
-            text: "Curry Bread",
-          }),
-        ],
-      }),
-      addElement({
-        classList: "menu-card",
-        children: [
-          addElement({
-            classList: "menu-img-container",
-            children: addElement({
-              type: "img",
-              classList: "menu-img",
-              src: baguette,
-            }),
-          }),
-          addElement({
-            classList: "menu-text",
-            text: "Baguette",
-          }),
-        ],
-      }),
-      addElement({
-        classList: "menu-card",
-        children: [
-          addElement({
-            classList: "menu-img-container",
-            children: addElement({
-              type: "img",
-              classList: "menu-img",
-              src: bagels,
-            }),
-          }),
-          addElement({
-            classList: "menu-text",
-            text: "Bagel",
-          }),
-        ],
-      }),
+      menuCardChild(croissant, "Kurowa-san"),
+      menuCardChild(crosandwich, "Kurowa-sandwich"),
+      menuCardChild(strawberry, "Strawberry Kurowa-san"),
+      menuCardChild(chocolat, "Pain Au Chocolat"),
+      menuCardChild(tray, "Kurowa-san Party"),
+      menuCardChild(melonsan, "Melon-san"),
+      menuCardChild(dorayaki, "Dorayaki"),
+      menuCardChild(currybread, "Curry Bread"),
+      menuCardChild(baguette, "Baguette"),
+      menuCardChild(bagels, "Bagel"),
     ],
   })
 
